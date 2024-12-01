@@ -1,0 +1,141 @@
+:root {
+  --phone-screen-color: #fff;
+  --phone-frame-color: #000;
+  --phone-shadow-color: #d1dada;
+  --page-background-color: #f3f4f6;
+  --main-heading-color: #000;
+  --check-button-text-color: #2847ef;
+  --clear-button-text-color: #dd3545;
+  --button-background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--page-background-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-heading {
+  margin-bottom: 2rem;
+  color: var(--main-heading-color);
+  font-size: 3.2rem;
+  font-family: "Silkscreen", sans-serif;
+  text-align: center;
+}
+
+.phone-mockup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 520px;
+  background-color: var(--phone-screen-color);
+  border-radius: 4rem;
+  border: 5px solid var(--phone-frame-color);
+  padding: 1rem 0;
+  box-shadow: 25px 8px 15px var(--phone-shadow-color);
+}
+
+.phone-front-camera {
+  clip-path: circle();
+  background-color: var(--phone-frame-color);
+  width: 16px;
+  height: 20px;
+}
+
+.phone-mockup-small-btn,
+.phone-mockup-large-btn {
+  position: absolute;
+  width: 8px;
+  background-color: var(--phone-frame-color);
+  border-radius: 10px;
+  right: -8px;
+}
+
+.phone-mockup-small-btn {
+  height: 40px;
+  top: 80px;
+}
+
+.phone-mockup-large-btn {
+  height: 80px;
+  top: 150px;
+}
+
+.user-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-input-label {
+  font-size: 2rem;
+}
+
+#user-input {
+  width: 92%;
+  height: 5rem;
+  border-radius: 1rem;
+  font-family: "Silkscreen", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+#user-input:focus {
+  outline: none;
+  border: 2px solid var(--check-button-text-color);
+}
+
+#user-input-label .btn {
+  font-family: "Roboto", sans-serif;
+}
+
+#results-div {
+  visibility: hidden;
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.btn {
+  width: 9rem;
+  height: 4rem;
+  margin: 1rem;
+  color: var(--button-text-color);
+  border-radius: 1.6rem;
+  border: none;
+  font-size: 1.6rem;
+  background-color: var(--button-background-color);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+#check-btn {
+  border: 2px solid var(--check-button-text-color);
+  color: var(--check-button-text-color);
+}
+
+#clear-btn {
+  border: 2px solid var(--clear-button-text-color);
+  color: var(--clear-button-text-color);
+}
