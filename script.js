@@ -44,6 +44,14 @@ const clearResultsDivAndUserInput = () => {
   userInputElement.value = "";
 };
 
-// Finally, we add a click event listener to the clear button and pass the clearResultsDivAndUserInput function as callback
+// We add a click event listener to the clear button and pass the clearResultsDivAndUserInput function as callback
 
 clearBtn.addEventListener("click", clearResultsDivAndUserInput);
+
+// Finally, we add a keydown event listener that will activate when the user presses the Enter or Return key
+
+userInputElement.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    checkUserInput();
+  }
+});
